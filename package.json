@@ -1,12 +1,13 @@
 {
-  "name": "creatuuls-interactive-scraper",
+  "name": "hitl-human-in-the-loop",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node dist/app.js",
+    "dev": "tsx watch app.ts",
+    "build": "tsup app.ts"
   },
   "keywords": [],
   "author": "",
@@ -36,5 +37,13 @@
       "cookies/SUBSTACK/*.json",
       "cookies/MAILCHIMP/*.json"
     ]
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.5.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
   }
 }
